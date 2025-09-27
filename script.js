@@ -105,3 +105,30 @@ function toggleLike(button) {
         heartIcon.innerHTML = '🤍'; 
     }
 }
+
+// Create floating heart animations when photo is liked
+function createFloatingHeart(button) {
+    const heart = document.createElement('div');
+    heart.innerHTML = '❤️';
+    heart.style.position = 'absolute';
+    heart.style.fontSize = '1.5rem';
+    heart.style.pointerEvents = 'none';
+    heart.style.zIndex = '1000';
+
+    const rect = button.getBoundingClientRect();
+    heart.style.left = rect.left + 'px';
+    heart.style.top = rect.top + 'px';
+
+    document.body.appendChild(heart);
+
+    // Animate the heart
+    heart.animate([
+        { transform: 'translateY(0px) scale(1)', opacity: 1 },
+        { transform: 'translateY(-60px) scale(1.5)', opacity: 0 }
+    ], {
+        duration: 1500,
+        easing: 'ease-out'
+    }).onfinish = () => {
+        document.body.removeChild(heart);
+    };
+}
