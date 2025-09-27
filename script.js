@@ -71,3 +71,13 @@ function setupScrollAnimations() {
         }
     });
 }
+
+// Animate message text with staggered effect
+function animateMessageText() {
+    const messageText = document.querySelectorAll('.message-text');
+    messageText.forEach((text, index) => {
+        setTimeout(() => {
+            text.classList.add('fade-in-animate');
+        }, index * 500); // Stagger by 500ms
+    });
+}
