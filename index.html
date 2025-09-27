@@ -10,6 +10,13 @@
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 
+    <!-- TAILWIND -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <!-- GOOGLE FONT -->
 <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
@@ -42,90 +49,71 @@
         </div>
     </section>
 
-    <!-- Photo Gallwey Section -->
-     <section class="gallery-section" id="gallery">
-        <div class="container">
-            <h2 class="section-title">Our Beautiful Memories</h2>
+ <!-- OUR MEMORIES -->
+  <section id="gallery" class="py-16 bg-gray-100 scroll-mt-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-10 text-red-600">OUR MEMORIES</h2>
+      <div class="grid md:grid-cols-3 gap-6">
 
-            <!-- Photo 1 -->
-            <div class="gallery-grid">
-                <div class="photo-card" data-aos="fade-up" data-delay="100">
-                    <img src="images/photo1.jpg" alt="Memory 1">
-                    <div class="photo-overlay">
-                        <div class="photo-caption">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt, blanditiis.</div>
-                    <button class="like-btn" onclick="toggleLike(this)">
-                        <span class="heart-icon">🤍</span>
-                    </button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Photo 2 -->
-                <div class="photo-card" data-aos="fade-up" data-delay="200">
-                    <div class="photo-container">
-                    <img src="images/photo1.jpg" alt="Memory 1">
-                    </div>
-                    <div class="photo-overlay">
-                        <div class="photo-caption">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt, blanditiis.</div>
-                    <button class="like-btn" onclick="toggleLike(this)">
-                        <span class="heart-icon">🤍</span>
-                    </button>
-                    </div>
-                </div>
-
-            <!-- Photo 3 -->
-             <div class="photo-card" data-aos="fade-up" data-delay="300">
-                    <div class="photo-container">
-                    <img src="images/photo1.jpg" alt="Memory 1">
-                    </div>
-                    <div class="photo-overlay">
-                        <div class="photo-caption">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt, blanditiis.</div>
-                    <button class="like-btn" onclick="toggleLike(this)">
-                        <span class="heart-icon">🤍</span>
-                    </button>
-                    </div>
-                </div>
-
-            <!-- Photo 4 -->
-             <div class="photo-card" data-aos="fade-up" data-delay="400">
-                    <div class="photo-container">
-                    <img src="images/photo1.jpg" alt="Memory 1">
-                    </div>
-                    <div class="photo-overlay">
-                        <div class="photo-caption">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt, blanditiis.</div>
-                    <button class="like-btn" onclick="toggleLike(this)">
-                        <span class="heart-icon">🤍</span>
-                    </button>
-                    </div>
-                </div>
-
-            <!-- Photo 5 -->
-             <div class="photo-card" data-aos="fade-up" data-delay="500">
-                    <div class="photo-container">
-                    <img src="images/photo1.jpg" alt="Memory 1">
-                    </div>
-                    <div class="photo-overlay">
-                        <div class="photo-caption">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt, blanditiis.</div>
-                    <button class="like-btn" onclick="toggleLike(this)">
-                        <span class="heart-icon">🤍</span>
-                    </button>
-                    </div>
-                </div>
-
-            <!-- Photo 6 -->
-             <div class="photo-card" data-aos="fade-up" data-delay="600">
-                    <div class="photo-container">
-                    <img src="images/photo1.jpg" alt="Memory 1">
-                    </div>
-                    <div class="photo-overlay">
-                        <div class="photo-caption">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt, blanditiis.</div>
-                    <button class="like-btn" onclick="toggleLike(this)">
-                        <span class="heart-icon">🤍</span>
-                    </button>
-                    </div>
-                </div>
+        <!-- PHOTO 1 -->
+        <div class="bg-white shadow-md rounded-lg p-6 hover:shadow-lg transition duration-300">
+            <img src="img/a.jpg" alt="Memory 1">
         </div>
-     </section>
+
+        <!-- PHOTO 2 -->
+        <div class="bg-white shadow-md rounded-lg p-6 hover:shadow-lg transition duration-300">
+            <img src="img/b.jpg" alt="Memory 2">
+        </div>
+
+        <!-- PHOTO 3 -->
+        <div class="bg-white shadow-md rounded-lg p-6 hover:shadow-lg transition duration-300">
+            <img src="img/c.jpg" alt="Memory 3">
+        </div>
+
+        <!-- PHOTO 4 -->
+        <div class="bg-white shadow-md rounded-lg p-6 hover:shadow-lg transition duration-300">
+            <img src="img/d.jpg" alt="Memory 4">
+        </div>
+
+        <!-- PHOTO 5 -->
+        <div class="bg-white shadow-md rounded-lg p-6 hover:shadow-lg transition duration-300">
+            <img src="img/e.jpg" alt="Memory 5">
+        </div>
+
+        <!-- PHOTO 6 -->
+          <div class="bg-white shadow-md rounded-lg p-6 hover:shadow-lg transition duration-300">
+          <img src="img/g.jpg" alt="Memory 6">
+        </div>
+
+        <!-- PHOTO 8 -->
+        <div class="bg-white shadow-md rounded-lg p-6 hover:shadow-lg transition duration-300">
+          <img src="img/h.jpg" alt="Memory 6">
+        </div>
+
+        <!-- PHOTO 7 -->
+        <div class="bg-white shadow-md rounded-lg p-6 hover:shadow-lg transition duration-300">
+          <img src="img/i.jpg" alt="Memory 7">
+        </div>
+
+        <!-- PHOTO 8 -->
+        <div class="bg-white shadow-md rounded-lg p-6 hover:shadow-lg transition duration-300">
+          <img src="img/j.jpg" alt="Memory 8">
+        </div>
+
+        <!-- PHOTO 9 -->
+        <div class="bg-white shadow-md rounded-lg p-6 hover:shadow-lg transition duration-300">
+          <img src="img/k.jpg" alt="Memory 9">
+        </div>
+
+        <!-- PHOTO 10 -->
+        <div class="bg-white shadow-md rounded-lg p-6 hover:shadow-lg transition duration-300">
+          <img src="img/l.jpg" alt="Memory 10">
+        </div>
+        
+        </div>
+      </div>
+    </div>
+  </section>
 
      <!-- Birthday Message Section -->
       <section class="message-section" id="message">
