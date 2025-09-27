@@ -149,3 +149,21 @@ window.addEventListener('scroll', function() {
         particle.style.transform = 'translateY(${scrolled * speed}px)';
     });
 });
+
+// Add mouse movement effect to hero section
+document.addEventListener('mousemove', (e) => {
+    const hero = document.querySelector('.hero');
+    if (!hero) return;
+    
+    const x = e.clientX / window.innerWidth;
+    const y = e.clientY / window.innerHeight;
+
+    // Subtle movement effect
+    const moveX = (x - 0.5) * 20;
+    const moveY = (y - 0.5) * 20;
+
+    const floatiingHearts = document.querySelectorAll('.floating-hearts');
+    if (floatiingHearts) {
+        floatiingHearts.style.transform = 'translate(${moveX}px, ${moveY}px)';
+    }
+});
