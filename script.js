@@ -31,8 +31,10 @@ function createParticles() {
 function initializeAnimation() {
     // Typewriter effect is handled by CSS
 
+    // Add staggered animation delays to fade-in elements
     const fadeElements = document.querySelectorAll('.fade-in');
     fadeElements.forEach((element, index) => {
         element.style.animationDelay = (index * 0.2) + 's'; 
     });
 }
+
