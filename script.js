@@ -81,3 +81,13 @@ function animateMessageText() {
         }, index * 500); // Stagger by 500ms
     });
 }
+
+// Smooth scroll to sections
+function scrollToSection(sectionId) {
+    const section = document.getElementById(sectionId);
+    if (section) {
+        section.scrollIntoView({ 
+            behavior: 'smooth' 
+        });
+    }
+}
