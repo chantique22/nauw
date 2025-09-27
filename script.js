@@ -212,3 +212,16 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
+
+// Add entrance animation for photos when they come into view
+const photoObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const img = entry.target.querySelector('img');
+            if (img) {
+                img.style.animation = 'photoEntrance 0.8s ease-out forwards';
+            }
+        }
+    });
+}, { threshold: 0.2 });
+
