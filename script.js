@@ -26,3 +26,13 @@ function createParticles() {
         particles.appendChild(particle);
     }
 }
+
+// Initialize typewriter and other animations
+function initializeAnimation() {
+    // Typewriter effect is handled by CSS
+
+    const fadeElements = document.querySelectorAll('.fade-in');
+    fadeElements.forEach((element, index) => {
+        element.style.animationDelay = (index * 0.2) + 's'; 
+    });
+}
