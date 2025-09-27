@@ -38,3 +38,36 @@ function initializeAnimation() {
     });
 }
 
+// Scroll animations (AOS - Animate On Scroll)
+function setupScrollAnimations() {
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px"
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('aos-animate');
+
+                // Special handling for message text
+                if (entry.target.classList.contains('message-card')) {
+                    animateMessageText();
+                }
+            }
+        });
+    
+    }, observerOptions);
+
+    // Observe elements for scroll animations
+    const elementsToObserve = document.querySelectorAll('[data-aos], .section-title, .message-card');
+    elementsToObserve.forEach(element => {
+        observer.observe(element);
+
+        // Add delay based on data delay attribute
+        const delay = element.getAttribute('data-delay');
+        if (delay) {
+            element.style.animationDelay = delay + 'ms';
+        }
+    });
+}
