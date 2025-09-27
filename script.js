@@ -225,3 +225,23 @@ const photoObserver = new IntersectionObserver((entries) => {
     });
 }, { threshold: 0.2 });
 
+// Observe all photo card
+document.querySelectorAll('.photo-card').forEach(card => {
+    photoObserver.observe(card);
+});
+
+// Add photo entrance animation
+const photoStyle = document.createElement('style');
+photoStyle.textContent = `
+    @keyframes photoEntrance {
+        from {
+            transform: scale(0.8) rotate(-5deg);
+            opacity: 0;
+        }
+        to {
+            transform: scale(1) rotate(0deg);
+            opacity: 1;
+        }
+    }
+`;
+document.head.appendChild(photoStyle);
