@@ -200,3 +200,15 @@ document.querySelectorAll('button').forEach(button => {
             }, 600);
     });
 });
+
+// Add ripple animation
+const style = document.createElement('style');
+style.textContent = `
+    @keyframes ripple {
+        to {
+        transform: scale(2);
+        opacity: 0;
+        }
+    }
+`;
+document.head.appendChild(style);
