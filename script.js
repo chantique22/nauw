@@ -91,3 +91,17 @@ function scrollToSection(sectionId) {
         });
     }
 }
+
+// Toggle like functionality for photos
+function toggleLike(button) {
+    const heartIcon = button.querySelector('.heart-icon');
+    button.classList.toggle('liked');
+
+    if (button.classList.contains('liked')) {
+        heartIcon.innerHTML = '❤️'; 
+        // Create floating heart effect
+        createFloatingHeart(button);
+    } else {
+        heartIcon.innerHTML = '🤍'; 
+    }
+}
